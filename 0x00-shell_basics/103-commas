@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -p1a | sort -d | awk '{ printf "%s,", $0 } END { print "" }'
+find . -maxdepth 1 -printf '%f\n' | sort -df | awk '{ORS = (NR == 1 ? "" : ",")} /^(\.|..)$/ {print $0"/"} !/^\./ {print $0}'
