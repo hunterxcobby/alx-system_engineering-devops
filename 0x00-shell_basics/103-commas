@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -p1a | sort -d | awk '{ printf "%s,", $0 } END { print "" }'
