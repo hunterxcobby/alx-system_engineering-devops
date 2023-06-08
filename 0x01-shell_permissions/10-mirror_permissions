@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 354 olleh
+chmod u=rw,g=rw,o=r,a+x olleh
