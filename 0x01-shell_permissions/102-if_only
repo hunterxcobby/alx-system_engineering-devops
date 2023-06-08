@@ -1,2 +1,2 @@
 #!/bin/bash
-find /path/to/to/directory -user betty -exec chown guillaume {} +
+chown --from=guillaume betty hello
