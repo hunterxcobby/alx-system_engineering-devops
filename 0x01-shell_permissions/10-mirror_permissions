@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u=rw,g=rw,o=r,a+x olleh
+chmod --reference=olleh a+x olleh
