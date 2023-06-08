@@ -1,0 +1,2 @@
+#!/bin/bash
+find /path/to/to/directory -user guillaume -exec chown betty {} +
