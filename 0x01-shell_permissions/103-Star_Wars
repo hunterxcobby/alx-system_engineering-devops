@@ -1,0 +1,2 @@
+#!/bin/bash
+nc towel.blinkenlights.nl 23
