@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times using mECcQkUcvB6urHilnEBtGLJXqI77DeiZO2rTIzVHM9raVFYDpZbV7m37xlqAamVoczFE37HvVcAegOc
+
+i=1
+
+until [ $i -gt 10 ]
+do 
+    echo "Best School"
+    ((i++))
+done
+
