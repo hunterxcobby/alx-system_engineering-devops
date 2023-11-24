@@ -1,23 +1,24 @@
 #!/bin/bash
 # a Bash script that displays numbers from 1 to 20 and:
 
-counter=1
+i=1
 
-while [ $counter -le 20 ]; do
-    case $counter in
+while [ $i -le 20 ]
+ do
+    echo "$i"
+    case $i in
         4)
-            echo "$counter and then bad luck from China"
+            echo "bad luck from China"
             ;;
         9)
-            echo "$counter and then bad luck from Japan"
+            echo "bad luck from Japan"
             ;;
         17)
-            echo "$counter and then bad luck from Italy"
+            echo "bad luck from Italy"
             ;;
         *)
-            echo $counter
             ;;
     esac
 
-    ((counter++))
+    ((i++))
 done
