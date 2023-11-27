@@ -3,7 +3,7 @@
 # bash script that displays `To infinity and beyond` indefinitely.
 # add a `sleep 2` in between each iteration of the loop
 
-while [ 1 ]
+while true
 do
     echo "To infinity and beyond"
     sleep 2
