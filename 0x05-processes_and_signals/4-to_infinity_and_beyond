@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#!/usr/bin/env bash
+# bash script that displays `To infinity and beyond` indefinitely.
+# add a `sleep 2` in between each iteration of the loop
 
 while [ 1 ]
 do
