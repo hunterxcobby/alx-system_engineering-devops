@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# bash script that displays a list of all currently running process.
+# shellcheck disable=SC2009
+# line 3 disables the shellcheck suggestion for using pgrep instead of grep.
+
+ps aux f | grep "bash"
