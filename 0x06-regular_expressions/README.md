@@ -28,47 +28,47 @@ sylvain@ubuntu$ ./example.rb 127.0.0.a
 * [Learn Regular Expressions with simple, interactive exercises](https://regexone.com/)
 
 ## Description of what each file shows (Tasks):
-* project_aid	--- folder that contains concept to better understand the project and JPEGs for README.
+* extra	--- folder that contains concept to better understand the project and JPEGs for README.
 * Files that start with:
 0. [Simply matching School](./0-simply_match_school.rb):
-<img src="./project_aid/regex-task0.png" alt="Task-0" width=100%>
+<img src="./extra/regex-task0.png" alt="Task-0" width=100%>
 
 * Requirements:
 	- The regular expression must match `School`
 	- Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 - Example:
 	```sh
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb School | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb School | cat -e
 	School$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "Best School" | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "Best School" | cat -e
 	School$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "School Best School" | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "School Best School" | cat -e
 	SchoolSchool$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "Grace Hopper" | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./0-simply_match_school.rb "Grace Hopper" | cat -e
 	$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ 
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ 
 	```
 1. [Repetition Token #0](./1-repetition_token_0.rb) :
-<img src="./project_aid/regex-task1.png" alt="Task-1" width=100%>
+<img src="./extra/regex-task1.png" alt="Task-1" width=100%>
 
 * Requirements:
 	- Find the regular expression that will match the above cases
 	- Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 * The [website](regex101.com) is awesome to test out how exactly it works. So we just insert the test string from the image above (left part) and then put in the regular expression `hbt{2,5}n` and see how it matches.
 2. [Repetition Token #1](./2-repetition_token_1.rb) :
-<img src="./project_aid/regex-task2.png" alt="Task-2" width=100%>
+<img src="./extra/regex-task2.png" alt="Task-2" width=100%>
 
 * Requirements:
 	- Find the regular expression that will match the above cases
 	- Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 3. [Repetition Token #2](./3-repetition_token_2.rb) :
-<img src="./project_aid/regex-task3.png" alt="Task-3" width=100%>
+<img src="./extra/regex-task3.png" alt="Task-3" width=100%>
 
 * Requirements:
 	- Find the regular expression that will match the above cases
 	- Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 4. [Repetition Token #3](./4-repetition_token_3.rb) :
-<img src="./project_aid/regex-task4.png" alt="Task-4" width=100%>
+<img src="./extra/regex-task4.png" alt="Task-4" width=100%>
 
 * Requirements:
 	- Find the regular expression that will match the above cases
@@ -79,15 +79,15 @@ sylvain@ubuntu$ ./example.rb 127.0.0.a
 	- The regular expression must be exactly matching a string that starts with `h` ends with `n` and can have any single character in between
 	- Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 	```sh
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hn' | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hn' | cat -e
 	$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hbn' | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hbn' | cat -e
 	hbn$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hbtn' | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'hbtn' | cat -e
 	$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'h8n' | cat -e
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$ ./5-beginning_and_end.rb 'h8n' | cat -e
 	h8n$
-	kazzywiz@Kazzywiz:~/alx-system_engineering-devops/0x06-regular_expressions$  
+	cobby@ubuntu:~/alx-system_engineering-devops/0x06-regular_expressions$  
 	```
 6. [Call me maybe](./6-phone_number.rb) :
 * This task is brought to you by a professional advisor [Neha Jain](https://twitter.com/_nehajain), Senior Software Engineer at LinkedIn.
@@ -105,7 +105,7 @@ sylvain@ubuntu$ ./example.rb 127.0.0.a
 	sylvain@ubuntu$
 	```
 7. [OMG WHY ARE YOU SHOUTING?](./7-OMG_WHY_ARE_YOU_SHOUTING.rb) :
-<img src="./project_aid/regex-task7.jpg" alt="Task-7" width=35%>
+<img src="./extra/regex-task7.jpg" alt="Task-7" width=35%>
 
 * Requirement:
 	- The regular expression must be only matching: capital letters
