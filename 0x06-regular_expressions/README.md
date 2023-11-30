@@ -1,5 +1,5 @@
 # Project: 0x06. Regular expression
-<img src="./project_aid/regex_now_2_problems.jpg" alt="Regex_2_problems" width=75%>
+<img src="./extra/regex_now_2_problems.jpg" alt="Regex_2_problems" width=75%>
 
 ## Background Context
 * For this project, you have to build your regular expression using Oniguruma, a regular expression library that which is used by Ruby by default. Note that other regular expression libraries sometimes have different properties.
