@@ -39,15 +39,15 @@ Each file in this repository holds a visual drawing of web infrastructures, from
 
 ### Simple Web Infrastructure
 
-<img src="" alt="Simple_web_stack" width=100%>
+<img src="./images/pDoiOxf - Imgur.png" alt="Simple_web_stack" width=100%>
 
 ### Distributed Web Infrastructure
 
-<img src="./images/Distributed Web Infrastructure.png" alt="Distributed Web" width=100%>
+<img src="./images/yO6Msl0 - Imgur.png" alt="Distributed Web" width=100%>
 
 ### Secured and Monitored Web Infrastructure
 
-<img src="https://imgur.com/yO6Msl0" alt="Secured & Monitored Web" width=100%>
+<img src="./images/WEB INFRASTRUCTURE - Imgur.png" alt="Secured & Monitored Web" width=100%>
 
 ---
 ## Author
