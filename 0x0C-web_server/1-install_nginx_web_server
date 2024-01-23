@@ -15,7 +15,7 @@ if command -v nginx &> /dev/null; then
 else
     # Update package list and install nginx
     sudo apt-get -y update
-    sudo apt-get -y install nginx
+    sudo apt-get install -y nginx
 fi
 
 # Ensure nginx is listening to port 80
