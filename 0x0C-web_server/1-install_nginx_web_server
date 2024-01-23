@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Check if nginx is installed
+if command -v nginx &> /dev/null; then
+    echo "Nginx is already installed."
+else
+    # Update package list and install nginx
+    sudo apt-get -y update
+    sudo apt-get -y install nginx
+fi
+
+# Set up the default page
+echo "Hello, World!" | sudo tee /var/www/html/index.html > /dev/null
+
+# Restart nginx (without using systemctl)
+sudo service nginx restart
