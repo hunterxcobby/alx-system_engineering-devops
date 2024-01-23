@@ -10,12 +10,9 @@
 
 # Check if nginx is installed
 
-if !command -v nginx &> /dev/null;
-then
-    # Update package list and install nginx
-    sudo apt-get -y update
-    sudo apt-get install -y nginx
-fi
+# Update package list and install nginx
+sudo apt-get -y update
+sudo apt-get install -y nginx
 
 # Ensure nginx is listening to port 80
 ufw allow 'Nginx HTTP'
