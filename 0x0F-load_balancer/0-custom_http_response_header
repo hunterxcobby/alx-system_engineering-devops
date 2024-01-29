@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Configure web-02 to be identical with web-01
+#an ubuntu machine to have a custom header X-Served-By
+
+# Update package information
+sudo apt-get -y update
+
+# Install Nginx
+sudo apt-get -y install nginx
+
+# Create simple HTML files
+echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# Create Nginx configuration snippet
+new_config="add_header X-Served-By \$hostname;\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\tinternal;\n\t}\n"
+
+# Update Nginx configuration
+sudo sed -i "/server_name _;/c\\$new_config" /etc/nginx/sites-enabled/default
+# sudo sed -i "s#server_name _;#$new_config#" /etc/nginx/sites-enabled/default
+
+# Restart Nginx to apply changes
+sudo service nginx restart
