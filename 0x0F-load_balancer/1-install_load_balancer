@@ -16,8 +16,8 @@ frontend haproxy_balancer
     
 backend webservers
     balance roundrobin
-    server 444607-web-01 100.27.4.8:80 check
-    server 444607-web-02 18.207.1.51:80 check
+    server 434802-web-01 100.27.4.8:80 check
+    server 434802-web-02 18.207.1.51:80 check
 "
 
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
