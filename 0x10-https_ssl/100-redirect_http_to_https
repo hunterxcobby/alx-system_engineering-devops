@@ -45,7 +45,11 @@ frontend hunterxcobby-frontend-https
 	http-request redirect scheme https code 301 unless { ssl_fc }
 	default_backend hunterxcobby-backend
 
-backend hunterxcobby-backend
-        balance roundrobin
-        server 63210-web-01 100.25.19.204:80 check
-        server 63210-web-02 54.157.159.85:80 check
+# Backend configuration
+backend http_servers
+	balance roundrobin
+	server 434802-web-01 100.27.4.8:80 check
+	server 434802-web-02 18.207.1.51:80 check
+
+
+# sudo certbot --standalone --preferred-challenges http --http-01-port 80 -d www.hunterxcobby.tech
