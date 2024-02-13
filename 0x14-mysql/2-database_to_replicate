@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# created this file to act as an answer file for the commands and steps used to pass task 2 of the MySQL project
+
+# log in to your web-01 server and access MySQL
+mysql -u root -p
+
+# create the database
+CREATE DATABASE tyrell_corp;
+
+# switch to newly created db
+USE tyrell_corp;
+
+# create the nexus6 table
+CREATE TABLE nexus6 (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255));
+
+# insert at least one entry [or two if you want :-)]
+INSERT INTO nexus6 (name) VALUES ('Ayomide');
+
+# grant select permissions to holberton_user
+GRANT SELECT ON tyrell_corp.nexus6 TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+
+# verify the table and the entry we put in
+SELECT * FROM nexus6;
