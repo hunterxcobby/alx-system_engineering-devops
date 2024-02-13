@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# created this file to act as an answer file for the commands and steps used to pass task 1 of the MySQL project
+
+# log in to your web-01 server and enter the your SQL
+mysql -u root -p
+
+# create user and grant necessary privileges as instructed (inside the mysql)
+CREATE USER 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+
+# move into the mysql database to confirm that everything was succesful
+SHOW DATABASES;
+SELECT User, Host FROM mysql.user;
+# confirm that grants and privileges were successful. Bienvenue!
+SHOW GRANTS FOR 'holberton_user'@'localhost';
