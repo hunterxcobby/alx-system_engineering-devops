@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# created this file to act as an answer file for the commands and steps used to pass task 3 of the MySQL project
+
+# log in to your web-01 server and access MySQL
+mysql -u root -p
+
+# create the replica_user with appropriate permissions
+CREATE USER 'replica_user'@'%' IDENTIFIED BY 'your_password';
+GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
+FLUSH PRIVILEGES;
+
+# Grant SELECT privileges on mysql.user table to holberton_user
+GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+
+# verify that replica_user was created with the correct permissions
+SELECT * FROM mysql.user WHERE User = 'replica_user';
