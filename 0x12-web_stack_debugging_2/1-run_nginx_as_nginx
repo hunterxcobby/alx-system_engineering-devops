@@ -1,38 +1,18 @@
-#!/bin/env bash
-# Check if Nginx is already running as the "nginx" user
-CURRENT_USER=$(ps -eo user,comm | grep nginx | awk '{print $1}')
+#!/usr/bin/env bash
+# scrip that configures container in such a way that nginx must be running as nginx user
 
-# Exit if Nginx is running as the correct user
-if [[ "$CURRENT_USER" == "nginx" ]]; then
-  echo "Nginx is already running as the 'nginx' user."
-  exit 0
-fi
+# Use variables for paths
+NGINX_CONF="/etc/nginx/nginx.conf"
+DEFAULT_SITE="/etc/nginx/sites-available/default"
 
-# Ensure the "nginx" user exists
-id nginx &> /dev/null
-if [[ $? -ne 0 ]]; then
-  echo "Creating 'nginx' user..."
-  useradd -r nginx
-fi
+# Update Nginx configuration to run as nginx user
+sed -i 's/#user www-data/user nginx;/' "$NGINX_CONF"
 
-# Change ownership of Nginx files and directories
-chown -R nginx:nginx /etc/nginx /var/www /var/log/nginx
+# Update default site configuration to listen on port 8080
+sed -i "s/80/8080/g" "$DEFAULT_SITE"
 
-# Check if port 8080 is free
-netstat -tulpn | grep ":8080" &> /dev/null
-if [[ $? -eq 0 ]]; then
-  echo "Port 8080 is already in use. Choose a different port."
-  exit 1
-fi
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
 
-# Update Nginx configuration file
-sed -i "s/listen 80;/listen 8080;/" /etc/nginx/nginx.conf
-
-# Start Nginx as the "nginx" user
-systemctl restart nginx
-
-# Verify if Nginx is running as the correct user and listening on port 8080
-ps -eo user,comm | grep nginx
-nc -z 0 8080 ; echo $?
-
-echo "Nginx is now running as the 'nginx' user and listening on port 8080."
+# Restart Nginx
+sudo -u nginx service nginx start
