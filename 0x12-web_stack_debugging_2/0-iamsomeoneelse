@@ -1,19 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
+# the script should run the whoami command under the user passed as argument
 
-# Check if at least one argument is provided
-if [[ $# -eq 0 ]]; then
-  echo "Error: Please provide a username as an argument."
-  exit 1
-fi
-
-# Store the username argument
-username="$1"
-
-# Switch to the specified user using su
-su - "$username" -c "whoami"
-
-# Handle potential errors from su
-if [[ $? -ne 0 ]]; then
-  echo "Error: Could not switch to user '$username'."
-  exit 1
-fi
+sudo -u "$1" whoami
