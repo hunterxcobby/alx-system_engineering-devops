@@ -1,5 +1,4 @@
 #!/bin/env bash
-
 # Check if Nginx is already running as the "nginx" user
 CURRENT_USER=$(ps -eo user,comm | grep nginx | awk '{print $1}')
 
