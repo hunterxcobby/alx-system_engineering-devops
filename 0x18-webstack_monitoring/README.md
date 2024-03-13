@@ -7,7 +7,7 @@ For this project, we expect you to look at these concepts:
 - [Monitoring](./concepts/monitoring.md)
 - [Server](./concepts/server.md)
 
-![web_monitoring](./concepts/web_monitoring.png)
+![web_monitoring](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/281/hb3pAsO.png)
 
 ## Background Context
 
@@ -18,7 +18,7 @@ Web stack monitoring can be broken down into 2 categories:
 - Application monitoring: getting data about your running software and making sure it is behaving as expected
 - Server monitoring: getting data about your virtual or physical server and making sure they are not overloaded (could be CPU, memory, disk or network overload)
 
-![monitor_all_things](./concepts/monitor_all_things.jpg)
+![monitor_all_things](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/281/ktCXnhE.jpg)
 
 ## Resources
 
