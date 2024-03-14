@@ -56,7 +56,7 @@ Requirements:
 Example:
 
 ```sh
-cobby@cobby-VirtualBox:~/alx-system_engineering-devops/0x15-api$ python3 0-gather_data_from_an_API.py 2
+cobba~/alx-system_engineering-devops/0x15-api$ python3 0-gather_data_from_an_API.py 2
 Employee Ervin Howell is done with tasks (8/20):
 Ervin Howell: 8 completed tasks out of 20
         distinctio vitae autem nihil ut molestias quo
